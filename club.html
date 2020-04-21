@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Serie A</title>
+    <meta name="description" content="My first PWA" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#00897B" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+    tbody {
+      display:block;
+      height:150px;
+      overflow:auto;
+    }
+    thead, tbody tr {
+      display:table;
+      width:100%;
+      table-layout:fixed;
+    }
+    thead {
+      width: calc( 100% - 1em )
+    }
+    table {
+      width:100%;
+    }
+
+    .preloader-background {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #eee;
+      
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;	
+    }
+    </style>
+  </head>
+  <body>
+      <!-- <div class="preloader-background">
+          <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div>
+              <div class="gap-patch">
+                <div class="circle"></div>
+              </div>
+              <div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+    <!-- Navigasi -->
+    <nav class="blue-grey col s12" role="navigation">
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo" id="logo-container">Serie A</a>
+        <a href="./index.html" class="sidenav-trigger" data-target="nav-mobile">
+          <i class="material-icons">arrow_back</i>
+        </a>
+        <ul class="topnav right hide-on-med-and-down"></ul>
+        <ul class="sidenav" id="nav-mobile"></ul>
+      </div>
+    </nav>
+    <!-- Akhir Navigasi -->
+    <div class="preloader-background">
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- <form> -->
+    <div class="container">
+      <div class="center" id="body-content">
+
+      </div>  
+    </div>
+    
+    <div id="loading"> </div>
+    <div class="container">
+      <div class="responsive-table table-status-sheet">
+        <table class="bordered">
+          <thead>
+            <tr>
+              <th class="center">#</th>
+              <th class="center">Name</th>
+              <th class="center">Position</th>
+              <th class="center">Shirt Number</th>
+            </tr>
+          </thead>
+          <tbody id="player">
+            
+          </tbody>
+        </table>
+      </div>
+
+    <!-- <input type="submit" value="Add Favorites Team" class="" > -->
+    <br>
+    <br>
+    </div>
+    <!-- <div  class="container" id="player">
+
+    </div> -->
+    <!-- <input type="hidden" id="clubId"> -->
+  <!-- </form> -->
+    <!-- <div>
+    </div> -->
+
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/snarkdown@1.0.2/dist/snarkdown.umd.js"
+    ></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/idb.js"></script>
+    <script src="js/db_fav.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        $('.preloader-background').delay(1700).fadeOut('slow');
+	
+        $('.preloader-wrapper')
+          .delay(1700)
+          .fadeOut();
+
+        getClubId();
+      });
+    </script>
+  </body>
+</html>

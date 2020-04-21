@@ -1,0 +1,30 @@
+{
+    "name": "Lega Calcio",
+    "short_name": "Calcio A",
+    "description": "Information Serie A Fans",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#00897B",
+    "theme_color": "#00897B",
+    "icons": [
+          {
+            "src": "icon.png",
+            "type": "image/png",
+            "sizes": "128x128"
+          }, {
+            "src": "icon.png",
+            "type": "image/png",
+            "sizes": "152x152"
+          }, {
+            "src": "icon.png",
+            "type": "image/png",
+            "sizes": "144x144"
+          }, {
+            "src": "icon.png",
+            "type": "image/png",
+            "sizes": "192x192"
+          }
+    ],
+
+    "gcm_sender_id": "491725764573"
+}
